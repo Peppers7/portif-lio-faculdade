@@ -1,0 +1,176 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* ================= VARIÁVEIS ================= */
+:root { 
+    --fonte--conversao24px: 1.5rem;
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+    --cor-fundo-principal: #6e9eb4;
+    --cor-header: #0a0a0a;
+    --cor-footer: #082f49;
+    --cor-destaque: #facc15;
+    --cor-texto: #000000;
+    --cor-branco: #ffffff;
+}
+
+/* ================= BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    background-color: var(--cor-fundo-principal);
+}
+
+/* ================= TIPOGRAFIA ================= */
+h1 {
+    color: var(--cor-branco);
+    font-size: 40px;
+    font-family: var(--fonte-primaria);
+}
+
+h2 {
+    font-size: 40px;
+    color: var(--cor-texto);
+    font-family: var(--fonte-primaria);
+}
+
+.paragrafo {
+    font-size: var(--fonte--conversao24px); 
+    font-family: var(--fonte-secundaria);
+    line-height: 1.5; 
+    color: var(--cor-texto);
+    text-align: justify;
+}
+
+strong {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    background-color: var(--cor-header);
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.menu {
+   display: flex;
+   gap: 15px;
+}
+
+.menu__links__navegacao {
+    font-size: 1.2rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-branco);
+    font-weight: 600;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu__links__navegacao:hover {
+    color: var(--cor-destaque);
+}
+
+/* ================= MAIN ================= */
+main {
+    flex: 1;
+    display: flex;
+    padding: 5% 15%;
+}
+
+/* Sessão apresentação */
+#apresentacao {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px;  
+}
+
+.apresentacao__imagem {
+   max-width: 300px;
+   border-radius: 10px;
+}
+
+/* Sessão geral (sobre mim, formação) */
+.apresentacao__geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;  
+}
+
+.apresentacao__geral h2 {
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--cor-destaque);
+    padding-bottom: 8px;
+}
+
+/* Lista de cursos */
+.apresentacao__geral ul {
+    list-style: none;
+    width: 100%;
+    max-width: 800px;
+}
+
+.apresentacao__geral li {
+    font-size: var(--fonte--conversao24px);
+    font-family: var(--fonte-secundaria);
+    margin: 15px 0;
+    background: #ffffff20;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.apresentacao__geral li:hover {
+    transform: translateX(5px);
+    background: #ffffff40;
+}
+
+/* Links certificados */
+.apresentacao__conteudo__texto__certificado {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.apresentacao__conteudo__texto__certificado:hover {
+    text-decoration: underline;
+}
+
+/* ================= CONTATO ================= */
+#main__contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentacao__form {
+    text-align: start;
+    gap: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    padding: 28px;
+    text-align: center;
+    background-color: var(--cor-footer);
+}
+
+footer p {
+    font-family: var(--fonte-primaria);
+    color: #f9fafb;
+    font-size: 14px;
+}
